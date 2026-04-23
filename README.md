@@ -1,6 +1,8 @@
 Kampu
 -----
 
+> **Archived 2026-04** — no longer maintained; all crates.io versions are yanked. For declarative binary protocol parsing in Rust, prefer [`binrw`](https://docs.rs/binrw), which the maintainer has since migrated to in the [bluetooth_gnss](https://github.com/ykasidit/bluetooth_gnss) project. Source remains available under Apache-2.0 — feel free to fork and continue.
+
 Generic byte array parser function where you can define the structure/tree of the bytes in JSON, send it a byte array and get the parsed output in JSON.
 
 'Kampu' is the name a large tree common in Thailand, it has very large branches that could be allegorical to the complex bit/byte/loops/matches that this parser aims to handle.
