@@ -414,13 +414,15 @@ fn test_loop_until_no_more_data() {
     }));
 }
 
-macro_rules! get_or_default {
+
+#[test]
+fn test_json_default_val_if_not_present() {
+    macro_rules! get_or_default {
     ($obj:expr, $key:expr, $default:expr) => {
         $obj.get($key).cloned().ok_or($default).unwrap_or_else(|err| serde_json::Value::from(err))
     };
-}
-#[test]
-fn test_json_default_val_if_not_present() {
+    }
+
     let schema_json = json!({
         "a": 1,
         "b": 2
